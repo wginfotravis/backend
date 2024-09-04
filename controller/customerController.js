@@ -107,7 +107,7 @@ export const updateCustomer = asyncHandler(async (req, res) => {
   if (customer) {
     customer.fullName = req.body.fullName || customer.fullName;
     customer.email = req.body.email || customer.email;
-    // customer.phone =  req.body.phone || customer.phone;
+    customer.phone =  req.body.phone || customer.phone;
     customer.address = req.body.address || customer.address;
     customer.dob = req.body.dob || customer.dob;
     customer.membershipNo = req.body.membershipNo || customer.membershipNo;
@@ -122,7 +122,7 @@ export const updateCustomer = asyncHandler(async (req, res) => {
       _id: updatedCustomer._id,
       fullName: updatedCustomer.fullName,
       email: updatedCustomer.email,
-      // phone: updatedCustomer.phone,
+      phone: updatedCustomer.phone,
       address: updatedCustomer.address,
       dob: updatedCustomer.dob,
       membershipNo: updatedCustomer.membershipNo,
